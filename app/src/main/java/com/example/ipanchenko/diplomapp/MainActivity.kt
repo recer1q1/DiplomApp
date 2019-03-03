@@ -1,11 +1,14 @@
 package com.example.ipanchenko.diplomapp
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 
 class MainActivity : BaseActivity(0) {
     var i = 0
+    private lateinit var sharedPref: SharedPreferences
     private val TAG = "MainActivity"
     //private lateinit var mAuth: FirebaseAuth
 
@@ -14,18 +17,15 @@ class MainActivity : BaseActivity(0) {
         setContentView(R.layout.activity_home)
         Log.d(TAG, "onCreate")
         setupBottomNavigation()
-
-        //mAuth = FirebaseAuth.getInstance()
-        // mAuth.signOut()
+        sharedPref = applicationContext.getSharedPreferences("AUTH", Context.MODE_PRIVATE)
 
     }
 
     override fun onStart() {
         super.onStart()
-        if (i == 0) {
+        val username = sharedPref.getString("USER", "undefined")
+        if (username == "undefined") {
             startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-            i++
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.ipanchenko.diplomapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -21,17 +22,13 @@ class LoginActivity : AppCompatActivity(), KeyboardVisibilityEventListener/*, Te
             Log.d(TAG,"onCreate")
 
         login_button.setOnClickListener{
+            val sharedPref = applicationContext.getSharedPreferences("AUTH", Context.MODE_PRIVATE)
+            sharedPref.edit().putString("USER", email_input.text.toString()).commit()
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
 
         KeyboardVisibilityEvent.setEventListener(this, this)
-        //login_button.isEnabled = false
-        //email_input.addTextChangedListener(this)
-        //password_input.addTextChangedListener(this)
-        //login_button.setOnClickListener(this)
-
-        //mAuth = FirebaseAuth.getInstance()
     }
 
 /*        override fun onCreate(savedInstanceState: Bundle?) {
