@@ -46,7 +46,7 @@
             android:id="@+id/login_button"
             app:layout_constraintTop_toBottomOf="@id/password_input"
             android:text="Log in"
-            style="@style/login_button"/>
+            style="@style/login_button" tools:ignore="MissingConstraints"/>
 
     <TextView
             android:layout_width="match_parent"

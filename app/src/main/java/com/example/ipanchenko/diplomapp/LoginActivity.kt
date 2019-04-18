@@ -31,28 +31,6 @@ class LoginActivity : AppCompatActivity(), KeyboardVisibilityEventListener/*, Te
         KeyboardVisibilityEvent.setEventListener(this, this)
     }
 
-/*        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_home)
-            login_button.setOnClickListener{
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-            }
-        }*/
-
-    //override fun onClick(view: View) {
-        //val email = email_input.text.toString()
-        //val password = password_input.text.toString()
-        //if (validate(email, password)){
-            //startActivity(Intent(this, LoginActivity::class.java))
-            //mAuth.SignInWithEmailAndPassword()
-        //}else{
-            //Toast.makeText(this, "Go out!", Toast.LENGTH_SHORT).show()
-        //}
-        //startActivity(Intent(this, MainActivity::class.java))
-        //finish()
-    //}
-
     override fun onVisibilityChanged(isKeyboardOpen: Boolean) {
        if (isKeyboardOpen){
            scroll_view.scrollTo(0, scroll_view.bottom)
@@ -62,13 +40,4 @@ class LoginActivity : AppCompatActivity(), KeyboardVisibilityEventListener/*, Te
            create_account_text.visibility = View.VISIBLE
        }
     }
-
-
-
-    //override fun beforeTextChanged(s: Editable?) {
-    //   login_button.isEnabled = validate(email_input.text.toString(), password_input.text.toString())
-    //}
-
-    //private fun validate(email: String, password: String) =
-    //        email.isNotEmpty() && password.isNotEmpty()
 }
