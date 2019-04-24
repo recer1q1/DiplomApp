@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DiplomApp</string>
     <string name="create_account">Don`t have an account? <b>Sign up!</b></string>
+    <string name="fa_map_marker">\uf041 </string>
 </resources>
