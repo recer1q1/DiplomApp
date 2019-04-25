@@ -2,4 +2,6 @@
     <string name="app_name">DiplomApp</string>
     <string name="create_account">Don`t have an account? <b>Sign up!</b></string>
     <string name="fa_map_marker">\uf041 </string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">zsHJLqK2lFzUIMSzqqQYlkrwT</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">ARUloYJFp18PQ7oStRiobH8gDPmRyaqCqjZwj99msHNtJWlyDt</string>
 </resources>

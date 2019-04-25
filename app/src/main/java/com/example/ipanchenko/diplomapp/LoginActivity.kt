@@ -14,7 +14,6 @@ import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventList
 
 class LoginActivity : AppCompatActivity(), KeyboardVisibilityEventListener/*, TextWatcher, View.onClickListener*/ {
     private val TAG = "LoginActivity"
-    //private lateinit var mFirebaseAuth:FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +29,13 @@ class LoginActivity : AppCompatActivity(), KeyboardVisibilityEventListener/*, Te
 
         KeyboardVisibilityEvent.setEventListener(this, this)
     }
+
+
+
+    fun login_button(view: View){
+
+    }
+
 
     override fun onVisibilityChanged(isKeyboardOpen: Boolean) {
        if (isKeyboardOpen){
